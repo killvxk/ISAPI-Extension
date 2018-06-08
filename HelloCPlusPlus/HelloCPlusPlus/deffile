@@ -1,0 +1,6 @@
+LIBRARY		"HelloCPlusPlus"
+
+EXPORTS
+	HttpExtensionProc
+	GetExtensionVersion
+	TerminateExtension

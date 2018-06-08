@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{45155B80-8580-4CEB-AB8A-AC410153E040}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>HelloCPlusPlus</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;HELLOCPLUSPLUS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>deffile</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;HELLOCPLUSPLUS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>deffile</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;HELLOCPLUSPLUS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>deffile</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;HELLOCPLUSPLUS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>deffile</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\ammintrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\arm64intr.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\arm64_neon.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\armintr.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\arm_neon.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\CodeAnalysis\sourceannotations.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\concurrencysal.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\crtdefs.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\eh.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\emmintrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\excpt.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\immintrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\intrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\intrin0.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\limits.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\mm3dnow.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\mmintrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\nmmintrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\pmmintrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\sal.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\setjmp.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\setjmpex.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\smmintrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\stdarg.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\stdint.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\tmmintrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\use_ansi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\vadefs.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\vcruntime.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\vcruntime_exception.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\vcruntime_new.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\vcruntime_new_debug.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\vcruntime_string.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\vcruntime_typeinfo.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\wmmintrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\xatomic.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\xatomic0.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\xcall_once.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\xkeycheck.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\xlocinfo.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\xmmintrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\xstring_insert.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\xtgmath.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\ymath.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\yvals.h" />
+    <ClInclude Include="c:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\include\zmmintrin.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\apiset.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\apisetcconv.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\basetsd.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\bcrypt.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\cderr.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\driverspecs.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\guiddef.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\inaddr.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\kernelspecs.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\ktmtypes.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\minwindef.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\no_sal2.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\poppack.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\pshpack1.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\pshpack2.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\pshpack4.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\pshpack8.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\rpc.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\rpcasync.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\rpcdce.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\rpcdcep.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\rpcndr.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\rpcnterr.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\rpcsal.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\sdkddkver.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\sdv_driverspecs.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\specstrings.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\specstrings_strict.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\specstrings_undef.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\stralign.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\tvout.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\winapifamily.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\windef.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\winerror.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\winpackagefamily.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\winsmcrd.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\wnnc.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\wtypes.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\WTypesbase.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_malloc.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math_defines.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_memcpy_s.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_memory.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_search.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_share.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_stdio_config.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_terminate.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wctype.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wdirect.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wio.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wprocess.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdlib.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstring.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wtime.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\crtdbg.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\ctype.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\errno.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\float.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\locale.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\malloc.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\math.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\share.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stddef.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdlib.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\sys\stat.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\sys\types.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\wchar.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\cguid.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\combaseapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\coml2api.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\commdlg.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\consoleapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\datetimeapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\dde.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\ddeml.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\debugapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\dlgs.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\dpapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\enclaveapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\errhandlingapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\fibersapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\fileapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\handleapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\heapapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\HttpExt.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\ime_cmodes.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\imm.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\interlockedapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\ioapiset.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\jobapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\jobapi2.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\joystickapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\libloaderapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\lzexpand.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\mciapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\mcx.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\memoryapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\minwinbase.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\mmeapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\mmiscapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\mmiscapi2.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\mmsyscom.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\mmsystem.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\msxml.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\namedpipeapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\namespaceapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\nb30.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\ncrypt.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\OAIdl.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\objbase.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\ObjIdl.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\ObjIdlbase.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\ole.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\Ole2.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\OleAuto.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\oleidl.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\playsoundapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\processenv.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\processthreadsapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\processtopologyapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\profileapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\PropIdl.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\PropIdlBase.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\prsht.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\realtimeapiset.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\reason.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\rpcnsi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\rpcnsip.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\SCardErr.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\securityappcontainer.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\securitybaseapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\servprov.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\shellapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\stringapiset.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\synchapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\sysinfoapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\systemtopologyapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\threadpoolapiset.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\threadpoollegacyapiset.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\timeapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\timezoneapi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\Unknwn.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\Unknwnbase.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\urlmon.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\utilapiset.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\verrsrc.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\WinBase.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\wincon.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\wincrypt.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\Windows.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winefs.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\wingdi.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winioctl.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winnetwk.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\WinNls.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winnt.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winperf.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winreg.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winresrc.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winscard.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winsock.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winspool.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winsvc.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\WinUser.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winver.h" />
+    <ClInclude Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\wow64apiset.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="HelloCPlusPlus.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\commdlg.inl" />
+    <None Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\prsht.inl" />
+    <None Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winbase.inl" />
+    <None Include="c:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um\winuser.inl" />
+    <None Include="deffile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
